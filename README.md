@@ -3,6 +3,7 @@
 ---
 ## Student Details
 - **Name:** Selvaganesh Arunmozhi
+- **SRN:** PES2UG24CS451
 - **Course:** UE24CS252B - Computer Networks
 - **Project:** Link Failure Detection and Recovery using Mininet + Ryu
 
