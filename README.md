@@ -1,11 +1,12 @@
 # SDN Mini Project
 
-## Link Failure Detection and Recovery using Mininet + Ryu
-
 ---
+## Student Details
+- **Name:** Selvaganesh Arunmozhi
+- **Course:** UE24CS252B - Computer Networks
+- **Project:** Link Failure Detection and Recovery using Mininet + Ryu
 
 ## Problem Statement
-
 Design and implement an SDN-based system that detects link failures and dynamically reroutes traffic using a centralized controller.
 
 ---
