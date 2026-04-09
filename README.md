@@ -80,9 +80,9 @@ mininet> pingall
 
 ### Expected:
 
-* ✅ Ping SUCCESS
-* ✅ Flow rules installed
-* ✅ Controller logs paths
+* Ping SUCCESS
+* Flow rules installed
+* Controller logs paths
 
 ---
 
@@ -102,9 +102,9 @@ mininet> pingall
 
 ### Expected:
 
-* ⚠️ Few packet drops
-* ✅ Traffic rerouted via s1 → s3 → s2
-* ✅ Controller logs:
+* Few packet drops
+* Traffic rerouted via s1 → s3 → s2
+* Controller logs:
 
 ```
 🔥 LINK DOWN: 0x1 -> 0x2
@@ -136,7 +136,7 @@ sudo ovs-ofctl dump-flows s3
 priority=10, eth_src=..., eth_dst=..., actions=output:PORT
 ```
 
-## 📡 Wireshark Analysis
+## Wireshark Analysis
 
 ### Steps:
 
