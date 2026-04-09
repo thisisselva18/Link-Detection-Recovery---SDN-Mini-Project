@@ -4,22 +4,13 @@
 
 ---
 
-## 📌 Problem Statement
+## Problem Statement
 
 Design and implement an SDN-based system that detects link failures and dynamically reroutes traffic using a centralized controller.
 
 ---
 
-## 🎯 Objective
-
-* Detect link failures using topology events
-* Compute alternate paths dynamically (Dijkstra)
-* Install OpenFlow rules (FLOW_MOD)
-* Maintain connectivity during failures
-
----
-
-## 🏗️ Network Topology
+## Network Topology
 
 ```
            h1 (10.0.0.1)
@@ -39,7 +30,7 @@ Design and implement an SDN-based system that detects link failures and dynamica
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 Install dependencies:
 
@@ -51,9 +42,9 @@ pip install networkx
 
 ---
 
-## 🚀 Execution Steps
+## Execution Steps
 
-### 🖥️ Terminal 1: Start Ryu Controller
+### Terminal 1: Start Ryu Controller
 
 ```bash
 source ryu-env/bin/activate
@@ -70,7 +61,7 @@ Installing flow on 0x1 ...
 
 ---
 
-### 🖥️ Terminal 2: Start Mininet
+### Terminal 2: Start Mininet
 
 ```bash
 sudo mn --custom topo_linkfail.py --topo mytopo --controller=remote
@@ -78,7 +69,7 @@ sudo mn --custom topo_linkfail.py --topo mytopo --controller=remote
 
 ---
 
-## 🧪 TEST CASE 1: Normal Operation
+## TEST CASE 1: Normal Operation
 
 ### Run:
 
@@ -94,7 +85,7 @@ mininet> pingall
 
 ---
 
-## 🧪 TEST CASE 2: Link Failure & Recovery
+## TEST CASE 2: Link Failure & Recovery
 
 ### Step 1: Bring link down
 
@@ -128,7 +119,7 @@ mininet> link s1 s2 up
 ---
 
 
-## 📊 Flow Table Verification
+## Flow Table Verification
 
 Run in **new terminal (outside Mininet):**
 
@@ -155,7 +146,7 @@ priority=10, eth_src=..., eth_dst=..., actions=output:PORT
 tcp.port == 6653
 ```
 
-## 🔥 Key Features
+## Key Features
 
 * Dynamic shortest path routing using NetworkX
 * Real-time topology discovery
@@ -164,7 +155,7 @@ tcp.port == 6653
 
 ---
 
-## 🧠 Working Logic
+## Working Logic
 
 1. Switch sends **Packet-In**
 2. Controller learns host locations
@@ -174,7 +165,7 @@ tcp.port == 6653
 
 ---
 
-## 🎯 Conclusion
+## Conclusion
 
 The system successfully:
 
